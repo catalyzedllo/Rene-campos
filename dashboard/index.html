@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samaritan Commander Dashboard</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Samaritan Command Hub</p>
+        <h1>Commander Dashboard</h1>
+        <p class="subhead">One private screen for money, legal/CPRA, content, food, agents, and daily orders.</p>
+      </div>
+      <section class="status-card">
+        <span class="pulse"></span>
+        <div>
+          <strong>System Mode</strong>
+          <p id="systemMode">Build / Manual Input</p>
+        </div>
+      </section>
+    </header>
+
+    <section class="command-panel">
+      <label for="commandInput">Commander input</label>
+      <div class="command-row">
+        <input id="commandInput" type="text" placeholder="Example: add CPRA deadline May 4, Fresno Measure P" />
+        <button id="runCommand">Log Command</button>
+      </div>
+      <p class="hint">Voice-control ready later. For now, type or paste orders and the dashboard logs them.</p>
+    </section>
+
+    <section class="grid metrics-grid" aria-label="Primary metrics">
+      <article class="metric"><span>Cash runway</span><strong id="cashRunway">30 days</strong><small>Target: protect bills + build income</small></article>
+      <article class="metric"><span>CPRA / legal</span><strong id="legalCount">3 active</strong><small>Deadlines, letters, responses</small></article>
+      <article class="metric"><span>Content today</span><strong id="contentCount">0 posted</strong><small>TikTok / Suno / campaign clips</small></article>
+      <article class="metric"><span>Agent network</span><strong id="agentCount">8 planned</strong><small>Apps feeding Samaritan</small></article>
+    </section>
+
+    <section class="grid modules-grid" aria-label="Dashboard modules">
+      <article class="module critical">
+        <div class="module-head"><h2>NOW</h2><span>Priority</span></div>
+        <ul id="nowList"></ul>
+      </article>
+
+      <article class="module">
+        <div class="module-head"><h2>Money Engine</h2><span>30-day income</span></div>
+        <ul>
+          <li>Grimm White Suno packs: $19–$47</li>
+          <li>Daily TikTok video pipeline</li>
+          <li>Base44 store + subscriptions</li>
+          <li>Track paid tools: ChatGPT, Claude, Grok, Suno, websites</li>
+        </ul>
+      </article>
+
+      <article class="module">
+        <div class="module-head"><h2>CPRA / Legal</h2><span>Deadlines</span></div>
+        <ul>
+          <li>City of Fresno CPRA responses</li>
+          <li>DOJ tier correction letter</li>
+          <li>Rolling production requests</li>
+          <li>Calendar all response dates</li>
+        </ul>
+      </article>
+
+      <article class="module">
+        <div class="module-head"><h2>Content Command</h2><span>Fame + narrative</span></div>
+        <ul>
+          <li>Rene Campos: constitutional fighter narrative</li>
+          <li>Grimm White: music + visual posts</li>
+          <li>Books: Rene's Grid + Lunar Grimm</li>
+          <li>Robert agent: website + TikTok support</li>
+        </ul>
+      </article>
+
+      <article class="module">
+        <div class="module-head"><h2>Food Business</h2><span>Rene's LLC</span></div>
+        <ul>
+          <li>Ghost kitchen delivery buildout</li>
+          <li>Base44 order form</li>
+          <li>1099 driver intake</li>
+          <li>Menu, cost, and payout tracking</li>
+        </ul>
+      </article>
+
+      <article class="module">
+        <div class="module-head"><h2>Agent Map</h2><span>Samaritan feeds</span></div>
+        <ul>
+          <li>TikTok Monitor</li>
+          <li>Bank / accounting monitor</li>
+          <li>CPRA tracker</li>
+          <li>Legal tracker</li>
+          <li>Website updater</li>
+          <li>Calendar relay</li>
+          <li>Phone voice assistant</li>
+          <li>Commander briefing bot</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="activity">
+      <div class="module-head"><h2>Command Log</h2><span>Local browser storage</span></div>
+      <ol id="commandLog"></ol>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
